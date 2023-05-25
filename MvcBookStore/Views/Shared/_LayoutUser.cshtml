@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MiChu Books Shop - Nâng tầm tri thức</title>
+    <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
+    <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+        <div id="templatemo_container">
+            <div id="templatemo_top_panel">
+                <div id="templatemo_language_section">
+                    <a href="#"><img src="~/images/templatemo_flag_01.gif" alt="flag 1" /></a>
+                    <a href="#"><img src="~/images/templatemo_flag_02.gif" alt="flag 2" /></a>
+                    <a href="#"><img src="~/images/templatemo_flag_03.gif" alt="flag 3" /></a>
+                    <a href="#"><img src="~/images/templatemo_flag_04.gif" alt="flag 4" /></a>
+                    <a href="#"><img src="~/images/templatemo_flag_05.gif" alt="flag 5" /></a>
+                </div>
+                <div id="templatemo_shopping_cart">
+                    Shopping Cart <span>(<a href="#">3 items</a>)</span>
+                </div>
+            </div>
+
+            <div id="templatemo_header">
+                <img src="~/images/logo2.jpg" width="15%" height="90px" alt="Books Shop" />
+            </div>
+            
+            <div id="templatemo_banner">
+                <a href="#"><img src="~/images/sach2.jpg" width="950px" height="200px" alt="Flower Shop - Free Web Template" title="Flower Shop - Free Web Template" border="0" /></a>
+                
+            </div>
+
+            <div id="templatemo_menu_panel">
+                <ul>
+                    <li>
+                        @Html.ActionLink("TRANG CHỦ","Index","BookStore")
+                    </li>
+                    <li>
+                        @Html.ActionLink("ĐĂNG KÝ","Dangky","Nguoidung")
+                    </li>
+                    <li>
+                        @Html.ActionLink("ĐĂNG NHẬP", "Dangnhap","Nguoidung")
+                    </li>
+                    <li>
+                        @Html.Action("GiohangPartial","Giohang")
+                    </li>
+                  
+                </ul>
+            </div> <!-- end of menu -->
+
+            <div id="templatemo_content">
+
+                <div id="templatemo_content_left">
+                    <h1>Chào mừng đến với tiệm sách chúng tôi</h1>
+                    <p>"Cái gọi là duyên phận, chính là trong ngàn vạn người gặp được người cần gặp, trong ngàn vạn năm, giữa mênh mông hoang hoải vô tận của thời gian, không sớm một bước cũng không muộn một bước." </p>
+                    <p> Một cuốn sách hay không vẽ ra những điều hoang tưởng nó chữa lành tâm hồn cho con người, hướng chúng ta đến những điều tốt đẹp của cuộc sống, nơi đó chúng ta được yêu, được vì nhau, được xúc cảm cùng nhân vật.
+                    Hãy để chúng xóa nhòa đi cái tiêu cực của cuộc sống, cũng hãy để chúng ta yêu lấy bản thân mình thêm một chút.</p>
+                    <div class="cleaner_with_height">&nbsp;</div>
+
+
+                    <div>
+                        @RenderBody()
+                    </div>
+
+
+                    <div class="cleaner_with_height">&nbsp;</div>
+                </div> <!-- end of ocntent left -->
+
+                <div id="templatemo_content_right">
+                    <div class="templatemo_right_section">
+                        <h4>Search</h4>
+                        <div class="templatemo_right_section_content">
+                            <form method="get" action="#">
+                                <input name="keyword" type="text" id="keyword" />
+                                <input type="submit" name="submit" class="button" value="Search" />
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="templatemo_right_section">
+                        <h4>Chủ đề sách</h4>
+                        <div class="templatemo_right_section_content">
+                           @Html.Action("Chude","BookStore")
+                        </div>
+                    </div>
+
+                    <div class="templatemo_right_section">
+                        <h4>Nhà xuất bản</h4>
+                        <div class="templatemo_right_section_content">
+                            @Html.Action("Nhaxuatban", "BookStore")                         
+                        </div>
+                    </div>
+                </div> <!-- end of content right-->
+
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div id="templatemo_footer_panel">
+                <div id="footer_left">
+                    <img src="~/images/mastercard.gif" alt="Master Card" /><img src="~/images/visa.gif" alt="Visa Card" /><img src="~/images/paypal.gif" alt="PayPal" /><img src="~/images/verisignsecured.gif" alt="Verisign Secured" />
+                </div>
+                <div id="footer_right">
+                    <a>Nguyễn Lê Thảo Quyên - 0950080137</a><br />
+                    <a href="https://www.facebook.com/quyen.nguyenlethao.5" target="_parent">Facebook</a> <br/>
+                    <a>Liên hệ: 0834191498</a><br/>
+                    <a>Chào mừng và cảm ơn đến với của hàng chúng tôi</a>
+                </div>
+
+                <div class="cleaner">&nbsp;</div>
+            </div>
+        </div>
+        
+    </body>
+</html>
